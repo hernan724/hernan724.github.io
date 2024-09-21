@@ -1,0 +1,44 @@
+p {
+  color: black;
+  margin: 40px;
+  padding: 30px;
+  background-color: yellow;
+  text-align: center; 
+  border-radius: 10px;
+  border: solid red 5px;
+  font-size: 30px;
+  width: 30%;
+ 
+}
+
+h1 {
+  color: black;
+  margin: 35px;
+  padding: 30px;
+  background-color: yellow;
+  text-align: center;
+  border-radius: 10px;
+  border: solid red 5px;
+}
+
+
+
+.nombre {
+  color: blue;
+}
+
+li {
+  display: inline-block;
+  color: black;
+  padding: 30px;
+  width: 25%;
+  margin: 5px;
+  background-color: yellow;
+  text-align: center;
+  border-radius: 10px;
+  border: solid red 5px;
+}
+
+ul {
+  text-align: center;
+}
