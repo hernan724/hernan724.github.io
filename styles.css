@@ -1,26 +1,103 @@
+/* punto 2. profe notará que repetí los mismos selectores lo hice así para separar los puntos del tp */
 body {
-    margin: 0;
-    padding: 0;
-}
-
-header, footer {
-    background-color: #3c3c3c;
+    background-color: black;
     color: white;
+}
+
+/* punto 3 */
+h1, h2, h3, h4, h5, h6 {
+    color: red;
+}
+
+/* punto 4 */
+p a {
+    font-size: 30px;
+    color: yellow;
+}
+
+/* punto 5 */
+.enlace2 {
+    color: green;
+}
+
+/* punto 6 */
+.enlace3 {
+    color: darkorange;
+    font-size: 50px;
+}
+
+.enlace2 {
+    font-size: 60px;
+}
+
+/* punto 7 */
+p {
+    font-size: 30px;
+}
+
+.parrafo2 {
+  font-size: 20px;
+}
+
+/* punto 8 */
+p {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-align: right;
+}
+
+.parrafo2 {
+    font-family: Arial, Helvetica, sans-serif;
     text-align: center;
-    padding: 5px;
 }
 
-li {
-    display: inline;
-    margin: 15px;
+/* punto 9 */
+h1, h2, h3, h4, h5, h6 {
+    text-decoration: underline;
 }
 
-section {
-    border-radius: 10px;
-    margin: 20px;
+a {
+    text-decoration: none;
+}
+
+/* punto 10 */
+p {
+    color: aqua;
     padding: 10px;
-    box-shadow: 5px 5px 7px;
+    margin: 10px;
+    border: solid 2px;
 }
 
+.parrafo2 {
+    color: blueviolet;
+}
 
+/* punto 11 */
+footer a {
+    padding: 15px;
+    background-color: blueviolet;
+    border-radius: 5px;
+    color: white;
+}
 
+footer a:hover {
+    background-color: aqua;
+}
+
+/* punto 12 */
+ul.menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+ul.menu li { 
+    float: left; 
+    width: 20%;
+}
+
+ul.menu li a {
+    border: solid;
+    background-color: white;
+    display: block;
+    padding: 15px;
+}
