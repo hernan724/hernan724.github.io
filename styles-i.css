@@ -1,0 +1,107 @@
+body {
+    background-color: rgb(26, 26, 26);
+    color: white;
+    display: flex;
+    flex-direction: column;
+}
+
+/* header */
+header {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+section {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}
+
+img {
+    width: 100px;
+    border-radius: 5px;
+}
+
+ul {
+    list-style-type: none;
+    display: flex;
+    padding: 0;
+    flex-wrap: wrap;
+}
+
+li {
+    flex-grow: 1;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+    display: block;
+    text-align: center;
+    padding: 15px;
+    color: white;
+}
+
+a:hover {
+    border-bottom: solid #339cff;
+    color: #339cff;
+}
+/* header */
+
+
+/* footer */
+footer {
+    background-color: rgb(26, 26, 26);
+    color: white;
+    display: flex;
+    justify-content: space-around;
+    border-top: solid #339cff;
+    align-items: start;
+    flex-wrap: wrap;
+}
+
+.contacto {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.redes {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+    padding: 15px;
+}
+/* footer */
+
+/* plan de estudios */
+
+main {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 25px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+table {
+    border-collapse: collapse;
+    height: 300px;
+}
+
+th, td {
+    border: solid #5eaef9;
+    text-align: center;
+    padding: 5px;
+}
+/* plan de estudios */
+
