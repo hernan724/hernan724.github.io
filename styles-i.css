@@ -3,12 +3,7 @@ body {
     color: white;
 }
 
-img {
-    width: 100px;
-}
-
 header {
-    border: solid white;
     display: flex;
     flex-direction: column;
     gap: 10px;
@@ -16,12 +11,16 @@ header {
 
 section {
     display: flex;
-    justify-content: center;
     gap: 15px;
+    justify-content: center;
     align-items: center;
+    padding: 10px;
 }
 
-
+img {
+    width: 100px;
+    border-radius: 5px;
+}
 
 ul {
     list-style-type: none;
