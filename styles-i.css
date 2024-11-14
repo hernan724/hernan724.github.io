@@ -35,6 +35,7 @@ ul {
 li {
     flex-grow: 1;
     padding: 0;
+    font-size: 18px;
 }
 
 a {
@@ -48,6 +49,10 @@ a {
 a:hover {
     border-bottom: solid #339cff;
     color: #339cff;
+}
+
+header > a:hover {
+    border: none;
 }
 /* header */
 
@@ -96,6 +101,9 @@ main {
 table {
     border-collapse: collapse;
     height: 300px;
+    border-radius: 10px;
+    overflow: hidden;
+    margin: 10px;
 }
 
 th, td {
@@ -103,5 +111,62 @@ th, td {
     text-align: center;
     padding: 5px;
 }
+
+th {
+    background-color: #84c1fb;
+}
 /* plan de estudios */
+
+/* acerca de nosotros*/
+
+p {
+    margin: 5px;
+}
+
+main img {
+    width: 350px;
+}
+
+/* acerca de nosotros*/
+
+/*formulario */
+
+form {
+    display: flex;
+}
+
+fieldset {
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+    border: solid #339cff;
+}
+
+label {
+    margin: 10px;
+}
+
+form > input {
+    margin: 5px;
+}
+
+/*formulario */
+
+/* principal */
+
+.principal {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+}
+
+.principal img {
+    width: 200px;
+}
+
+.principal section {
+    display: flex;
+    align-items: end;
+}
+
 
