@@ -154,19 +154,19 @@ form > input {
 
 /* principal */
 
-.principal {
+.principal section {
     display: flex;
-    flex-direction: column;
-    align-items: start;
+    width: 70%;
+    justify-content: space-around;
+    height: 300px;
+    flex-wrap: wrap;
+    margin: 20px;
 }
 
 .principal img {
     width: 200px;
 }
 
-.principal section {
-    display: flex;
-    align-items: end;
+div {
+    text-align: center;
 }
-
-
