@@ -144,6 +144,7 @@ footer a:hover {
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
+    gap: 20px;
 }
 
 th, td {
