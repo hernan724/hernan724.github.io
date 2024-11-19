@@ -142,6 +142,8 @@ footer a:hover {
 table {
     margin-top: 20px;
     text-align: center;
+    border-collapse: collapse;
+    width: 350px;
 }
 
 .plan-de-estudios {
@@ -152,6 +154,11 @@ table {
 
 th, td {
     border: solid rgb(3, 124, 205);
+    padding: 5px;
+}
+
+th {
+    background-color: rgb(3, 124, 205);
 }
 
 .proyectos {
@@ -160,11 +167,13 @@ th, td {
 
 .proyecto img {
     width: 350px;
+    border-radius: 10px;
 }
 
 video {
     height: 350px;
     width: 350px;
+    border-radius: 10px;
 }
 
 .proyecto .multimedia {
@@ -172,6 +181,7 @@ video {
     flex-wrap: wrap;
     justify-content: space-around;
     gap: 20px;
+    margin-bottom: 10px;
 }
 
 .proyecto {
