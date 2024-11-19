@@ -139,12 +139,14 @@ footer a:hover {
     gap: 20px;
 }
 
+table {
+    margin-top: 20px;
+}
 
 .plan-de-estudios {
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
-    gap: 20px;
 }
 
 th, td {
