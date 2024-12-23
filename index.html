@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Panadería</title>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f9f9f9;
+      color: #333;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: start;
+      min-height: 100vh;
+    }
+    h1 {
+      background-color: #ffcc80;
+      color: #fff;
+      padding: 10px 20px;
+      border-radius: 5px;
+      text-align: center;
+      margin-bottom: 20px;
+      width: 100%;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+    .menu {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 20px;
+    }
+    .menu button {
+      margin: 0 10px;
+      padding: 10px 20px;
+      font-size: 1rem;
+      color: #fff;
+      background-color: #42a5f5;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+    .menu button:hover {
+      background-color: #1e88e5;
+    }
+    .hidden {
+      display: none;
+    }
+    .container {
+      width: 90%;
+      max-width: 400px;
+      background: #fff;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+    label, input, output {
+      display: block;
+      margin: 10px 0;
+      font-size: 1rem;
+    }
+    input {
+      width: 100%;
+      padding: 8px;
+      font-size: 1rem;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+    button {
+      display: block;
+      width: 100%;
+      padding: 10px;
+      margin: 10px 0;
+      font-size: 1rem;
+      color: #fff;
+      background-color: #ff7043;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+    button:hover {
+      background-color: #f4511e;
+    }
+    .result {
+      font-weight: bold;
+      text-align: center;
+      background-color: #f0f4c3;
+      padding: 15px;
+      border-radius: 5px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+    .result p {
+      margin: 5px 0;
+      font-size: 1.1rem;
+    }
+    .result p span {
+      color: #388e3c;
+      font-weight: bold;
+    }
+    @media (max-width: 600px) {
+      h1 {
+        font-size: 1.5rem;
+      }
+      label, input, output, button {
+        font-size: 0.9rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <h1>Panadería</h1>
+  <div class="menu">
+    <button onclick="mostrarSeccion('panCasero')">Pan Casero</button>
+    <button onclick="mostrarSeccion('panDulce')">Pan Dulce</button>
+    <button onclick="mostrarSeccion('pizza')">Pizza</button>
+  </div>
+
+  <!-- Sección Pan Casero -->
+  <div id="panCasero" class="hidden">
+    <div class="container">
+      <label for="harina">Cantidad de harina (en gramos):</label>
+      <input type="number" id="harina" placeholder="Ej: 1000" oninput="calcularIngredientesCasero()">
+
+      <button onclick="toggleModificar('modificarIngredientesCasero')">Modificar Ingredientes</button>
+      <div id="modificarIngredientesCasero" class="hidden">
+        <label for="agua">Porcentaje de agua (%):</label>
+        <input type="number" id="agua" placeholder="Ej: 60" value="60" oninput="calcularIngredientesCasero()">
+
+        <label for="levadura">Porcentaje de levadura (%):</label>
+        <input type="number" id="levadura" placeholder="Ej: 2.5" value="2.5" oninput="calcularIngredientesCasero()">
+
+        <label for="sal">Porcentaje de sal (%):</label>
+        <input type="number" id="sal" placeholder="Ej: 2.5" value="2.5" oninput="calcularIngredientesCasero()">
+
+        <label for="grasa">Porcentaje de grasa (%):</label>
+        <input type="number" id="grasa" placeholder="Ej: 10" value="10" oninput="calcularIngredientesCasero()">
+      </div>
+
+      <div class="result">
+        <p>Agua: <span id="resultadoAgua">0</span> gramos</p>
+        <p>Levadura: <span id="resultadoLevadura">0</span> gramos</p>
+        <p>Sal: <span id="resultadoSal">0</span> gramos</p>
+        <p>Grasa: <span id="resultadoGrasa">0</span> gramos</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Sección Pan Dulce -->
+  <div id="panDulce" class="hidden">
+    <div class="container">
+      <label for="harinaDulce">Cantidad de harina (en gramos):</label>
+      <input type="number" id="harinaDulce" placeholder="Ej: 1000" oninput="calcularIngredientesDulce()">
+
+      <div class="result">
+        <p>Levadura: <span id="resultadoLevaduraDulce">0</span> gramos</p>
+        <p>Azúcar: <span id="resultadoAzucar">0</span> gramos</p>
+        <p>Huevos: <span id="resultadoHuevos">0</span> gramos</p>
+        <p>Sal: <span id="resultadoSalDulce">0</span> gramos</p>
+        <p>Manteca: <span id="resultadoManteca">0</span> gramos</p>
+        <p>Leche: <span id="resultadoLeche">0</span> gramos</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Sección Pizza -->
+  <div id="pizza" class="hidden">
+    <div class="container">
+      <label for="harinaPizza">Cantidad de harina (en gramos):</label>
+      <input type="number" id="harinaPizza" placeholder="Ej: 1000" oninput="calcularIngredientesPizza()">
+
+      <div class="result">
+        <p>Agua: <span id="resultadoAguaPizza">0</span> gramos</p>
+        <p>Levadura: <span id="resultadoLevaduraPizza">0</span> gramos</p>
+        <p>Sal: <span id="resultadoSalPizza">0</span> gramos</p>
+        <p>Aceite: <span id="resultadoAceite">0</span> gramos</p>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function calcularIngredientesCasero() {
+      const harina = parseFloat(document.getElementById('harina').value) || 0;
+      const agua = parseFloat(document.getElementById('agua').value) || 0;
+      const levadura = parseFloat(document.getElementById('levadura').value) || 0;
+      const sal = parseFloat(document.getElementById('sal').value) || 0;
+      const grasa = parseFloat(document.getElementById('grasa').value) || 0;
+
+      document.getElementById('resultadoAgua').textContent = (harina * agua / 100).toFixed(2);
+      document.getElementById('resultadoLevadura').textContent = (harina * levadura / 100).toFixed(2);
+      document.getElementById('resultadoSal').textContent = (harina * sal / 100).toFixed(2);
+      document.getElementById('resultadoGrasa').textContent = (harina * grasa / 100).toFixed(2);
+    }
+
+    function calcularIngredientesDulce() {
+      const harina = parseFloat(document.getElementById('harinaDulce').value) || 0;
+      const levadura = 4;
+      const azucar = 16;
+      const huevos = 24;
+      const sal = 1;
+      const manteca = 20;
+      const leche = 40;
+
+      document.getElementById('resultadoLevaduraDulce').textContent = (harina * levadura / 100).toFixed(2);
+      document.getElementById('resultadoAzucar').textContent = (harina * azucar / 100).toFixed(2);
+      document.getElementById('resultadoHuevos').textContent = (harina * huevos / 100).toFixed(2);
+      document.getElementById('resultadoSalDulce').textContent = (harina * sal / 100).toFixed(2);
+      document.getElementById('resultadoManteca').textContent = (harina * manteca / 100).toFixed(2);
+      document.getElementById('resultadoLeche').textContent = (harina * leche / 100).toFixed(2);
+    }
+
+    function calcularIngredientesPizza() {
+      const harina = parseFloat(document.getElementById('harinaPizza').value) || 0;
+      const agua = 60;
+      const levadura = 2.5;
+      const sal = 2.5;
+      const aceite = 3;
+
+      document.getElementById('resultadoAguaPizza').textContent = (harina * agua / 100).toFixed(2);
+      document.getElementById('resultadoLevaduraPizza').textContent = (harina * levadura / 100).toFixed(2);
+      document.getElementById('resultadoSalPizza').textContent = (harina * sal / 100).toFixed(2);
+      document.getElementById('resultadoAceite').textContent = (harina * aceite / 100).toFixed(2);
+    }
+
+    function toggleModificar(id) {
+      const element = document.getElementById(id);
+      if (element.classList.contains('hidden')) {
+        element.classList.remove('hidden');
+      } else {
+        element.classList.add('hidden');
+      }
+    }
+
+    function mostrarSeccion(id) {
+      document.querySelectorAll('.container').forEach(section => {
+        section.parentElement.classList.add('hidden');
+      });
+      document.getElementById(id).classList.remove('hidden');
+    }
+  </script>
+</body>
+</html>
